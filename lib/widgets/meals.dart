@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:meals/widgets/meal.item.dart';
 
 import '../models/meal.dart';
 
@@ -21,11 +22,13 @@ class MealsScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('Uh oh ... nothing here!',
-            style: Theme.of(context)
+            Text(
+              'Uh oh ... nothing here!',
+              style: Theme.of(context)
                   .textTheme
                   .headlineLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),),
+                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+            ),
             const SizedBox(
               height: 16,
             ),
@@ -38,6 +41,13 @@ class MealsScreen extends StatelessWidget {
             ),
           ],
         ),
+      );
+    }
+
+    if (meals.isNotEmpty) {
+      content = ListView.builder(
+        itemCount: meals.length,
+        itemBuilder: (ctx, index) => MealItem(meal: meals[index]),
       );
     }
 
