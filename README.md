@@ -1,6 +1,8 @@
-# meals
+App de receitas com Flutter
 
-A new Flutter project.
+App de receitas utilizando Flutter - Projeto criado seguindo o curso seguindo o curso: Flutter & Dart - The Complete Guide [2023 Edition] by Maximilian Schwarzmüller.
+
+Seções 8, 9 e 10 - Criação de apps com múltiplas telas e navegação entre telas, gerenciamento de estado de todo o aplicativo e adição de animações
 
 ## Getting Started
 
